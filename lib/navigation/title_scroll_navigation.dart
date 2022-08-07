@@ -202,7 +202,9 @@ class _TitleScrollNavigationState extends State<TitleScrollNavigation> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
 children: [
-        Container(
+  Padding(
+        padding: EdgeInsets.only(left:widget.barStyle.startSpace),
+    child:Container(
           decoration: BoxDecoration(
             color: widget.barStyle.background,
             boxShadow: [
@@ -216,6 +218,22 @@ children: [
           ),
           child: _buildScrollTitles(),
         ),
+    ),
+      Visibility(
+                visible:widget.barStyle.showBottomLine,
+                child:
+                Positioned(
+                  bottom: 0,
+                  height: 3.0,
+                  width: _identifier.width,
+                  left: _identifier.position,
+                  child:  Container(
+                    width: double.infinity,
+                    height: 1,
+                    color: Color(0xFFEAEAEA),
+                  ),
+                ),
+              ),
         Expanded(
           child: ClipRRect(
             borderRadius: widget.bodyStyle.borderRadius,
