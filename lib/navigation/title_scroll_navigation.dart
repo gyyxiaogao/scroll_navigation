@@ -199,7 +199,9 @@ class _TitleScrollNavigationState extends State<TitleScrollNavigation> {
   Widget build(BuildContext context) {
     return Container(
       color: widget.bodyStyle.background,
-      child: Column(children: [
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+children: [
         Container(
           decoration: BoxDecoration(
             color: widget.barStyle.background,
