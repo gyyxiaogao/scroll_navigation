@@ -221,18 +221,11 @@ children: [
     ),
       Visibility(
                 visible:widget.barStyle.showBottomLine,
-                child:
-                Positioned(
-                  bottom: 0,
-                  height: 3.0,
-                  width: _identifier.width,
-                  left: _identifier.position,
-                  child:  Container(
+                child: Container(
                     width: double.infinity,
                     height: 1,
                     color: Color(0xFFEAEAEA),
                   ),
-                ),
               ),
         Expanded(
           child: ClipRRect(
