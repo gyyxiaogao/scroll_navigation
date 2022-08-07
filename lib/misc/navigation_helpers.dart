@@ -75,6 +75,8 @@ class TitleNavigationBarStyle {
     this.activeColor = Colors.blue,
     this.spaceBetween = 20.0,
     this.deactiveColor = Colors.black26,
+    this.startSpace = 0,
+    this.showBottomLine = false,
   });
 
   /// It is Titles style
@@ -97,6 +99,9 @@ class TitleNavigationBarStyle {
 
   ///It's the padding will have the titles container
   final EdgeInsets padding;
+  
+  final double startSpace;
+  final bool showBottomLine;
 }
 
 class NavigationBodyStyle {
